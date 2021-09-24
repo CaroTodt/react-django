@@ -39,12 +39,12 @@ const Login = ({ login, isAuthenticated }) => {
 
     const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
-    const onSubmit = data => {
+   
 
-        login(data.email, data.password);
-
-
-    };
+    const onSubmit = (data, e) => {
+        e.preventDefault();
+        login(data.email,data.password);
+    }
 
     if (isAuthenticated) {
         return <Redirect to='/' />
