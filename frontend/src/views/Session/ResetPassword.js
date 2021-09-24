@@ -7,8 +7,6 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
-import axios from 'axios';
-
 const ResetPassword = ({ reset_password}) => {
     const [requestSent, setRequestSent] = useState(false);
 
